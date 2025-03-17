@@ -3,58 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма</title>
+    <title>Форма регистрации пользователя</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .button-container {
+            grid-column: 1 / span 2;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        .required-field::after {
+            content: " *";
+            color: red;
+        }
+
+        .column-label { 
+            font-weight: bold;
+        }
+
+       
+
+        .left-column-controls {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .left-column-controls label {
+            margin-bottom: 8px; 
+        }
+    </style>
 </head>
 <body>
-    <h1>Форма регистрации пользователя</h1>
-    <form method="post">
-      <table>
-        <tr>
-          <td>
-            <label for="email">E-mail</label>
-          </td>
-          <td>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Введите e-mail"
-              required
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="password">Пароль</label>
-          </td>
-          <td>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Введите пароль"
-              required
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label>Пол</label>
-          </td>
-          <td>
-            <input type="radio" name="gender" id="male" value="male">
-            <label for="male">Мужчина</label>
-            <input type="radio" name="gender" id="female" value="female">
-            <label for="female">Женщина</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="birth_year">Год рождения</label>
-          </td>
-          <td>
-            <select name="birth_year" id="birth_year">
-              <option value="1981">1981</option>
+
+    <form action="#" method="post">
+        <label for="email" class="required-field column-label">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+
+        <label for="password" class="required-field column-label">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+
+        <label class="column-label">Пол:</label>
+        <div class="radio-group">
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male">
+                Мужской
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female">
+                Женский
+            </label>
+        </div>
+
+        <label for="birthYear" class="column-label">Год рождения:</label>
+        <select id="birthYear" name="birthYear">
+            <option value="">Выберите год</option>
+            <option value="1981">1981</option>
               <option value="1982">1982</option>
               <option value="1983">1983</option>
               <option value="1984">1984</option>
@@ -80,59 +142,43 @@
               <option value="2004">2004</option>
               <option value="2005">2005</option>
               <option value="2006">2006</option>
-              <option value="2007">2007</option>
-              <option value="2008">2008</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label>Я знаю</label>
-          </td>
-          <td>
-            <label>
-              <input type="checkbox" name="lang" value="rus" checked disabled>
-              Русский </label>
-              <br>
-            <label>
-              <input type="checkbox" name="lang" value="spanish">
-              Испанский </label>
-              <br>
-            <label>
-              <input type="checkbox" name="lang" value="german">
-              Немецкий </label>
-              <br>
-            <label>
-              <input type="checkbox" name="lang" value="eng">
-              Английский </label>
-              <br>
-            <label>
-              <input type="checkbox" name="lang" value="chinese">
-              Китайский
+        </select>
+
+         <label class="column-label">Я знаю:</label>
+         <div class="checkbox-group left-column-controls">
+            <label for="russian">
+                <input type="checkbox" id="russian" name="languages" value="russian" checked disabled>
+                Русский
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="about">Обо мне</label>
-          </td>
-          <td>
-            <textarea
-              name="about"
-              id="about"
-              rows="6"
-              cols="30"
-              placeholder="Напишите коротко о себе"
-            ></textarea>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <input type="submit" value="Готово" />
-            <input type="reset" value="Очистить" />
-          </td>
-        </tr>
-      </table>
+            <label for="spanish">
+                <input type="checkbox" id="spanish" name="languages" value="spanish">
+                Испанский
+            </label>
+            <label for="german">
+                <input type="checkbox" id="german" name="languages" value="german">
+                Немецкий
+            </label>
+            <label for="english">
+                <input type="checkbox" id="english" name="languages" value="english">
+                Английский
+            </label>
+            <label for="chinese">
+                <input type="checkbox" id="chinese" name="languages" value="chinese">
+                Китайский
+            </label>
+         </div>
+
+        <label for="aboutMe" class="column-label">Обо мне:</label>
+        <textarea id="aboutMe" name="aboutMe" rows="4" placeholder="Напишите коротко о себе"></textarea>
+
+        <label></label>
+        <label></label>
+
+        <div class="button-container">
+            <button type="submit">Сохранить</button>
+            <button type="reset">Очистить</button>
+        </div>
     </form>
-  </body>
+
+</body>
 </html>
