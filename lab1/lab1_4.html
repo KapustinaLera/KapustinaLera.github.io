@@ -9,7 +9,6 @@
 
         <figure>
             <img src="picture/aquaria.jpg"/>
-            <figcaption> Пример изображения </figcaption>
         </figure>
 
 		<h2>Элемент <code>img</code></h2>
@@ -24,8 +23,8 @@
 		<p>Атрибут <code>alt</code> предоставляет краткое описание изображения. Он содержит альтернативный текст, который отображается, если изображение не может быть выведено. Пользовательские агенты должны отображать альтернативный текст, если они не поддерживают изображения, или сконфигурированы так, чтобы не показывать изображения (отключен показ изображений).</p>
 
 		<figure>
-            <img src="picture/mushroom.jpg">
-            <figcaption> Описание изображения </figcaption>
+            <img src="mushroom.jpg" alt="mushroom.jpg">
+            <figcaption>атрибут alt</figcaption>
         </figure>
         
         <h2>Размеры изображения</h2>
@@ -41,8 +40,12 @@
 		</p>
 
         <figure>
-            <img src="picture/redcat.jpg"/>
-            <figcaption> Размеры изображения </figcaption>
+            <img src="picture/redcat.jpg" width="300" height="350"/>
+            <figcaption> Размеры изображения "300x350"</figcaption>
+        </figure>
+        <figure>
+            <img src="picture/redcat.jpg" width="200" height="350"/>
+            <figcaption> Размеры изображения "200x350"</figcaption>
         </figure>
 
 		<h2>Подпись к изображению</h2>
@@ -53,7 +56,7 @@
 
         <figure>
             <img src="picture/muscle.png"/>
-            <figcaption> Подпись </figcaption>
+            <figcaption> Подпись с помощью figcaption</figcaption>
         </figure>
 
 		<h2>Элемент picture</h2>
@@ -67,7 +70,24 @@
 		</p>
 
         <figure>
-            <img src="picture/slon.png"/>
+            <picture>
+                <source
+                media="(orientation:portrait)"
+                srcset="picture/mushroom_portrait.jpg"
+                />
+                <source
+                media="(orientation: landscape)"
+                srcset="picture/mushroom_landscape.jpg"
+                />
+                <source
+                media="(orientation: 2dppx)"
+                srcset="picture/mushroom_retina.jpg"
+                />
+                <img src="picture/mushroom.jpg" alt="гриб"/>
+            </picture>
+            <figcaption>
+                Пример изображения с использованием элемента picture
+            </figcaption>
         </figure>
 
 	</section>
