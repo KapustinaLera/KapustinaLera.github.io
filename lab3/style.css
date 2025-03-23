@@ -1,0 +1,49 @@
+
+        body{
+
+            background-image: url("pattern.svg"); 
+            background-repeat: repeat;
+            color: black;
+            background-color: white;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: right;
+        }
+            h1{
+                color: red;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: right;
+            }
+            em{
+                color: green;
+            }
+        
+        .wrapper {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 960px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        h1,h2 {
+            font-family: "Roboto", sans-serif;
+        }
+        strong {
+            font-family: "Caveat", cursive;
+        }
+
+        #element-for-background{
+            background-image: url('lab3\pattern.svg');
+        }
+
+        .article {
+            border: 2px solid #b22c2c; /* Цвет и толщина рамки */
+            border-radius: 10px; 
+            margin: 20px; 
+            padding: 20px; 
+            background-color: #6b87db;
+             /* border: 5px solid #2E9AFF; */
+            /* border: 2px solid transparent;
+            border-radius: 6px;  */
+        }
+    

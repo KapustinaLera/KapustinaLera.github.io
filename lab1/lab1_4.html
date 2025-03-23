@@ -1,3 +1,5 @@
+doc hfggfj,hgfd
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -8,7 +10,7 @@
 		<h1>Изображения</h1>
 
         <figure>
-            <img src="picture/aquaria.jpg"/>
+            <img src="picture/aquaria.jpg" alt="aquaria.jpg"/>
         </figure>
 
 		<h2>Элемент <code>img</code></h2>
@@ -16,7 +18,7 @@
 		<p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
 
         <figure>
-            <img src="picture/globus.gif"/>
+            <img src="picture/globus.gif" alt="globus.jpg"/>
         </figure>
 
 		<h2>Альтернативный текст</h2>
@@ -40,11 +42,11 @@
 		</p>
 
         <figure>
-            <img src="picture/redcat.jpg" width="300" height="350"/>
+            <img src="picture/redcat.jpg" width="300" height="350" alt="redcat.jpg"/>
             <figcaption> Размеры изображения "300x350"</figcaption>
         </figure>
         <figure>
-            <img src="picture/redcat.jpg" width="200" height="350"/>
+            <img src="picture/redcat.jpg" width="200" height="350" alt="redcat.jpg"/>
             <figcaption> Размеры изображения "200x350"</figcaption>
         </figure>
 
@@ -55,7 +57,7 @@
 		Элемент <code>figcaption</code> содержит описание для элемента <code>figure</code>. Он должен быть первым или последним элементом в группе.</p>
 
         <figure>
-            <img src="picture/muscle.png"/>
+            <img src="picture/muscle.png" alt="muscle.jpg"/>
             <figcaption> Подпись с помощью figcaption</figcaption>
         </figure>
 
@@ -78,10 +80,6 @@
                 <source
                 media="(orientation: landscape)"
                 srcset="picture/mushroom_landscape.jpg"
-                />
-                <source
-                media="(orientation: 2dppx)"
-                srcset="picture/mushroom_retina.jpg"
                 />
                 <img src="picture/mushroom.jpg" alt="гриб"/>
             </picture>
