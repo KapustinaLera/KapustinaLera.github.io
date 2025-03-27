@@ -4,186 +4,6 @@
 		<meta charset="UTF-8">
 		<title>Оформление вертикального меню</title>
 		<style>
-           html {
-					background: #f0f0f0;
-			}
-
-			.menu {
-					width: 200px;
-					background: #fff;
-					border: 1px solid #ddd;
-					font-family: sans-serif;
-			}
-
-			.menu ul {
-					list-style: none;
-					padding: 0;
-					margin: 0;
-			}
-
-			.menu li {
-					position: relative;
-			}
-
-			.menu li a {
-					display: block;
-					padding: 8px 15px;
-					text-decoration: none;
-					color: #336699;
-					border-bottom: 1px solid #eee;
-					background-color: #fff;
-					text-align: left;
-			}
-
-			.menu li a:hover {
-					background-color: #f0f8ff;
-			}
-
-			.menu li ul {
-					display: none;
-					list-style: none;
-					padding: 0;
-					margin: 0;
-					background-color: #fff;
-					position: absolute;
-					top: 100%;
-					left: 0;
-					width: 100%;
-					z-index: 1;
-			}
-
-			.menu li li {
-					/* margin-left: 10px; */
-			}
-
-			.menu li li a {
-					padding-left: 30px;
-					background: url('point.gif') no-repeat 15px center;
-					border-bottom: none;
-					color: #336699;
-			}
-
-			.menu li:hover > ul {
-					display: block;
-			}
-
-			.menu li > a::before {
-				content: '';
-				display: inline-block;
-				width: 16px;
-				height: 16px;
-				margin-right: 5px;
-				margin-left: -10px; /* Сдвигаем иконку левее */
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: contain;
-			}
-
-			.menu li:not(:has(ul)) > a::before {
-				content: none;
-			}
-
-			.menu li > a::before {
-				background-image: url('plus.gif'); /* Картинка для закрытого состояния */
-			}
-
-			.menu li:hover > a::before {
-				background-image: url('minus.gif'); /* Картинка для открытого состояния */
-			}
-	
-            /* html {
-					background: #f0f0f0;
-			}
-
-			.menu {
-					width: 200px;
-					background: #fff;
-			}
-
-			.menu ul {
-					list-style: none; /* Убираем стандартные маркеры списка 
-					padding: 0;
-					margin: 0;
-			}
-
-			.menu li {
-					position: relative; /* Для позиционирования иконок 
-			}
-
-			.menu li a {
-					display: block; /* Ссылка занимает всю ширину li 
-					padding: 8px 15px;
-					text-decoration: none;
-					color: #333;
-					border-bottom: 1px solid #eee; /* Добавляем разделитель между пунктами 
-			}
-
-			.menu li a:hover {
-					background-color: #f5f5f5;
-			}
-
-			.menu li ul {
-					display: none; /* Скрываем подменю по умолчанию 
-					list-style: none;
-					padding: 0;
-					margin: 0;
-					background-color: #f9f9f9;
-					position: absolute;
-					top: 0;
-					left: 100%;
-					width: 100%;
-					z-index: 1;
-			}
-
-			.menu li li {
-					 margin-left: 10px;  /*Добавляем отступ для подпунктов 
-			}
-
-			.menu li li a {
-					padding-left: 30px;  /* Увеличиваем отступ для дочерних пунктов 
-					background: url('point.gif') no-repeat 15px center;
-					border-bottom: none;
-			}
-
-			.menu li:hover > ul {
-					display: block; /* Отображаем подменю при наведении на li 
-			}
-
-			/* Стили для иконок plus/minus 
-			.menu li > a::before {
-				content: '';
-				display: inline-block;
-				width: 16px;
-				height: 16px;
-				margin-right: 5px;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: contain;
-			}
-
-			.menu li:not(:has(ul)) > a::before {
-				content: none; /* Убираем иконки для пунктов без подменю 
-			}
-
-			.menu li > a::before {
-				background-image: url('plus.gif');
-			}
-
-			.menu li:hover > a::before {
-				background-image: url('minus.gif');
-			}
-
-			/* для вложенных меню, если нужно  
-			.menu li li ul {
-				left: 100%;
-				top: 0;
-			}
-
-			.menu li li:hover > ul {
-				display: block;
-			} */
-
-/* 
 			html {
 					background: #f0f0f0;
 			}
@@ -194,28 +14,54 @@
 			}
 			
 			.menu ul {
-					
+                list-style: none;
+					padding: 0;
+					margin: 0;
 			}
 			
 			.menu li {
-					
+                position: relative;
 			}
 			
 			.menu li a {
-					
+                display: block;
+					padding: 8px 15px;
+					text-decoration: none;
+					color: #336699;
+					border-bottom: 1px solid #eee;
+					background-color: #fff;
+					text-align: left;
+
+                /* text-decoration: none;
+                display: block;
+                background-image: url('pic/minus.gif'); */
+                /* background: url('pic/plus.gif') */
 			}
 			
 			.menu li a:hover {
-					
+                background-color: #f0f8ff;
 			}
 			
 			.menu li ul {
-					
+                /* display: none; */
 			}
 			
-			.menu li li {
-					
+			 .menu li li {
+                padding-left: 30px; 
+				background: url('pic/plus.gif') no-repeat 10px center;
+			} 
+            /* menu > ul > li > a {
+				padding-left: 30px; 
+				background: url('pic/plus.gif') no-repeat 10px center;  
 			} */
+
+			/* Стили для подпунктов (Экшн, Мелодрамы, и т.д.) */
+			.menu li li a {
+
+				padding-left: 30px; /* Отступ для иконки */
+				background: url('pic/point.gif') no-repeat 15px center; /* Иконка point.gif */
+				border-bottom: none; /* Убираем нижнюю границу для подпунктов */
+			}
 	</style>
 </head>
 <body>
