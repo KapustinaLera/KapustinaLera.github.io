@@ -31,16 +31,12 @@ strong {
     font-family: "Caveat", cursive;
 }
 
-#element-for-background{
-    background-image: url('lab3\pattern.svg');
-}
-
 .article {
-    border: 2px solid #b22c2c; /* Цвет и толщина рамки */
+    border: 10px solid #b22c2c; 
     border-radius: 10px; 
-    margin: 20px; 
-    padding: 20px; 
-    background-color: #6b87db;
+    margin: 20px;  
+    padding: 20px;  
+    /* background-color: #6b87db; */
      /* border: 5px solid #2E9AFF; */
     /* border: 2px solid transparent;
     border-radius: 6px;  */
