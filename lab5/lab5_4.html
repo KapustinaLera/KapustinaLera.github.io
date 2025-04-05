@@ -5,34 +5,35 @@
     <title>flex</title>
     <style>
         body {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
+            font-family: Arial, sans-serif;
+            margin: 0;
         }
 
         .flex-container {
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px; 
+            display: flex;
+            padding: 10px;
+            align-items: flex-start; /* Align items to the top */
         }
 
         .flex-item {
-            padding: 10px; 
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         #left-flex {
-            width: 200px; 
-            background: #ccf; 
+            min-width: 200px;
+            background: #ccf;
         }
 
         #center-flex {
             flex-grow: 1;
-            background: #cfc; 
-            margin: 0 10px; 
+            background: #cfc;
+            margin: 0 10px;
         }
 
         #right-flex {
-            width: 200px; 
-            background: #fcc; 
+            min-width: 200px;
+            background: #fcc;
         }
     </style>
 </head>
@@ -64,8 +65,5 @@
             text text text text</div>
         <div id="right-flex" class="flex-item">right<br>right<br>right<br>right</div>
     </div>
-
-
-
 </body>
 </html>
